@@ -5,8 +5,6 @@ import DataTable from "./DataTable";
 const Handler = () => {
   const [dataField, setDataField] = useState({});
   const [selectedField, setSelectedField] = useState({});
-  const [fileType, setFileType] = useState();
-  const [encoding, setEncoding] = useState("UTF-8");
   const [fullData, setFullData] = useState([]);
 
   const handleFileUpload = async (event) => {
@@ -43,9 +41,6 @@ const Handler = () => {
     }
   };
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-  };
   const transferCheckedItems = (from, setFrom, to, setTo) => {
     const transferFrom = { ...from },
       transferTo = { ...to };

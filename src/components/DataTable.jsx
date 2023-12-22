@@ -27,6 +27,7 @@ const DataTable = ({ data, fields }) => {
                   key={labelIdx}
                   className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
                 >
+                  {label == "price" && <span>₹ </span>}
                   {row[label]}
                 </td>
               ))}
